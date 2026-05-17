@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lançar Documento · Bem Comum ERP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="app" id="app">
+
+  <!-- ─────────── Top bar ─────────── -->
+  <header class="topbar">
+    <button class="back" title="Voltar">←</button>
+    <h1>Lançar Documento</h1>
+    <div class="crumb">
+      <span>Contas a Pagar</span>
+      <span style="color: var(--ink-6);">/</span>
+      <span class="doc-id">DOC-2026-0847</span>
+    </div>
+    <button class="close" title="Fechar">✕</button>
+  </header>
+
+  <!-- ─────────── Body ─────────── -->
+  <div class="body">
+
+    <!-- PDF preview -->
+    <aside class="preview" id="preview">
+      <div class="preview-head">
+        <span class="label">📄 NFS-e_2026_0847.pdf · página 1/1</span>
+        <div class="tools">
+          <button title="Reduzir zoom">−</button>
+          <button title="Ampliar zoom">+</button>
+        </div>
+      </div>
+
+      <div class="pdf" id="pdf">
+        <div class="pdf-head">
+          <div class="seal">SF</div>
+          <div>
+            <h2>Nota Fiscal de Serviço Eletrônica</h2>
+            <div class="pdf-sub">Prefeitura Municipal de Fortaleza · SEFIN</div>
+          </div>
+          <div class="pdf-num">
+            <div>Número</div>
+            <strong>0847</strong>
+            <div>Série A1</div>
+          </div>
+        </div>
+
+        <div class="pdf-section">
+          <div class="pdf-section-title">Prestador de Serviços</div>
+          <div class="pdf-row" data-pdf="prestador-nome"><span class="k">Razão Social</span><span class="v">Tech Solutions Ltda</span></div>
+          <div class="pdf-row" data-pdf="prestador-cnpj"><span class="k">CNPJ</span><span class="v">12.345.678/0001-90</span></div>
+          <div class="pdf-row"><span class="k">Inscrição Mun.</span><span class="v">85.4729.001-1</span></div>
+          <div class="pdf-row"><span class="k">Endereço</span><span class="v">Av. Antônio Sales, 1854 · Fortaleza/CE</span></div>
+        </div>
+
+        <div class="pdf-section">
+          <div class="pdf-section-title">Tomador</div>
+          <div class="pdf-row"><span class="k">Razão Social</span><span class="v">Bem Comum Tecnologia S/A</span></div>
+          <div class="pdf-row"><span class="k">CNPJ</span><span class="v">48.295.610/0001-44</span></div>
+        </div>
+
+        <div class="pdf-section">
+          <div class="pdf-section-title">Discriminação do Serviço</div>
+          <table class="pdf-table">
+            <thead>
+              <tr><th>Item</th><th>Descrição</th><th class="right">Valor (R$)</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.</td>
+                <td data-pdf="descricao">Consultoria técnica em arquitetura de software — maio/2026</td>
+                <td class="right" data-pdf="valor-bruto">10.000,00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pdf-section">
+          <div class="pdf-section-title">Datas e Identificação</div>
+          <div class="pdf-row" data-pdf="emissao"><span class="k">Data de Emissão</span><span class="v">02/05/2026</span></div>
+          <div class="pdf-row"><span class="k">Competência</span><span class="v">Maio / 2026</span></div>
+          <div class="pdf-row"><span class="k">Local Prestação</span><span class="v">Fortaleza / CE</span></div>
+          <div class="pdf-row"><span class="k">Cód. Serviço</span><span class="v">01.05 — Consultoria em TI</span></div>
+        </div>
+
+        <div class="pdf-section">
+          <div class="pdf-section-title">Retenções (sobre R$ 10.000,00)</div>
+          <table class="pdf-table">
+            <tbody>
+              <tr><td data-pdf="iss-label">ISS retido na fonte (<strong>3,5%</strong>)</td><td class="right" data-pdf="iss-valor">350,00</td></tr>
+              <tr><td>IRRF (1,5%)</td><td class="right" data-pdf="irrf">150,00</td></tr>
+              <tr><td>INSS (11%)</td><td class="right" data-pdf="inss">1.100,00</td></tr>
+              <tr><td>PIS (0,65%)</td><td class="right" data-pdf="pis">65,00</td></tr>
+              <tr><td>COFINS (3%)</td><td class="right" data-pdf="cofins">300,00</td></tr>
+              <tr><td>CSLL (1%)</td><td class="right" data-pdf="csll">100,00</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pdf-totals">
+          <div class="line"><span class="k">Valor Bruto</span><span class="v">R$ 10.000,00</span></div>
+          <div class="line"><span class="k">(-) Retenções</span><span class="v">R$ 2.065,00</span></div>
+          <div class="line net"><span class="k">Valor Líquido</span><span class="v">R$ 7.935,00</span></div>
+        </div>
+
+        <div class="pdf-section" style="margin-top: 16px;">
+          <div class="pdf-section-title">Vencimento</div>
+          <div class="pdf-row" data-pdf="venc"><span class="k">Vence em</span><span class="v">10/06/2026 (30 dias após emissão)</span></div>
+        </div>
+
+        <!-- Cross-highlight target -->
+        <div class="pdf-hl" id="pdf-hl"></div>
+        <div class="pdf-scan" id="pdf-scan"></div>
+      </div>
+    </aside>
+
+    <!-- ─────────── Form ─────────── -->
+    <main class="form" id="form">
+
+      <!-- Lock banner (only when status=selado) -->
+      <div class="lock-banner" id="lock-banner">
+        <span class="ic">🔒</span>
+        <span><strong>Documento Selado</strong> por Ana Carvalho · 12/05/2026 · 10:32. Campos imutáveis (R2).</span>
+        <button class="reopen" id="reopen">Reabrir documento</button>
+      </div>
+
+      <!-- Hero — Fornecedor -->
+      <div class="hero">
+        <div class="info">
+          <div class="name">Tech Solutions Ltda</div>
+          <div class="cnpj">CNPJ 12.345.678/0001-90</div>
+
+          <div class="meta">
+            <a href="#" id="open-fornecedor-modal">
+              <svg class="ic-pen" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12L2.5 9.5L10 2L12 4L4.5 11.5L2 12Z"/>
+                <path d="M8.5 3.5L10.5 5.5"/>
+              </svg> 
+              Alterar fornecedor
+            </a>
+            <span class="separator">·</span>
+            <span class="date">Contratado desde mai/2023</span>
+          </div>
+        </div>
+        <span class="badge">✓ Identificado</span>
+      </div>
+
+      <!-- ─── Section: Identificação do documento ─── -->
+      <section class="section" data-section="identif">
+        <div class="section-head">
+          <span class="rule"></span>
+          <h3>Identificação do Documento</h3>
+          <span class="help">campos extraídos do PDF</span>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Tipo de Documento</label>
+            <div class="input ocr-ok is-select" data-field="tipo" data-pdf-target="prestador-nome">
+              <span class="value">NFS-e</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Nº do Documento</label>
+            <div class="input ocr-ok" data-field="numero">
+              <input type="text" value="0847" />
+            </div>
+          </div>
+          <div class="field">
+            <label>Série</label>
+            <div class="input" data-field="serie">
+              <input type="text" value="A1" />
+            </div>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>Competência</label>
+            <div class="input" data-field="competencia">
+              <input type="text" value="05/2026" />
+            </div>
+          </div>
+          <div class="field">
+            <label>Data de Emissão</label>
+            <div class="input ocr-ok" data-field="emissao" data-pdf-target="emissao">
+              <input type="text" value="02/05/2026" />
+            </div>
+          </div>
+          <div class="field">
+            <label>Vencimento</label>
+            <div class="input ocr-ok" data-field="vencimento" data-pdf-target="venc">
+              <input type="text" value="10/06/2026" />
+            </div>
+          </div>
+        </div>
+
+        <div class="field-row cols-2">
+          <div class="field">
+            <label>Valor Bruto <span class="req">*</span></label>
+            <div class="input ocr-ok" data-field="valor-bruto" data-pdf-target="valor-bruto">
+              <input type="text" value="R$ 10.000,00" id="input-bruto" />
+            </div>
+          </div>
+          <div class="field">
+            <label>Descrição</label>
+            <div class="input ocr-ok" data-field="descricao" data-pdf-target="descricao">
+              <input type="text" value="Consultoria técnica · maio/2026" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── Section: Retenções ─── -->
+      <section class="section has-issue" id="section-retencoes" data-section="retencoes">
+        <div class="section-head">
+          <span class="rule" style="background: var(--red);"></span>
+          <h3>Retenções</h3>
+          <span class="help" style="color: rgb(228, 146, 24);">1 divergência detectada</span>
+          <span class="count">6 retenções · R$ <span id="total-retencoes">2.065,00</span></span>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>ISS (5% padrão) <span class="req">*</span></label>
+            <div class="input ocr-divergent" data-field="iss" data-pdf-target="iss-label" id="field-iss">
+              <input type="text" value="R$ 350,00" id="input-iss" />
+            </div>
+            <div class="hint error">
+              <span class="icon">⚠</span>
+              <span>Documento traz <strong>3,5%</strong> — padrão SEFIN: 5%</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>IRRF (1,5%)</label>
+            <div class="input ocr-ok" data-field="irrf" data-pdf-target="irrf">
+              <input type="text" value="R$ 150,00" id="input-irrf" />
+            </div>
+          </div>
+          <div class="field">
+            <label>INSS (11%)</label>
+            <div class="input ocr-ok" data-field="inss" data-pdf-target="inss">
+              <input type="text" value="R$ 1.100,00" id="input-inss" />
+            </div>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>PIS (0,65%)</label>
+            <div class="input ocr-ok" data-field="pis" data-pdf-target="pis">
+              <input type="text" value="R$ 65,00" id="input-pis" />
+            </div>
+          </div>
+          <div class="field">
+            <label>COFINS (3%)</label>
+            <div class="input ocr-ok" data-field="cofins" data-pdf-target="cofins">
+              <input type="text" value="R$ 300,00" id="input-cofins" />
+            </div>
+          </div>
+          <div class="field">
+            <label>CSLL (1%)</label>
+            <div class="input ocr-ok" data-field="csll" data-pdf-target="csll">
+              <input type="text" value="R$ 100,00" id="input-csll" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── Calculation strip removed — sidebar shows the same info ─── -->
+
+      <!-- ─── Section: Pagamento ─── -->
+      <section class="section" data-section="pagamento">
+        <div class="section-head">
+          <span class="rule"></span>
+          <h3>Pagamento</h3>
+        </div>
+
+        <div class="field-row cols-3">
+          <div class="field">
+            <label>Forma de Pagamento</label>
+            <div class="input is-select" data-field="forma" id="open-forma">
+              <span class="value">PIX</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Aprovador</label>
+            <div class="input is-select" data-field="aprovador" id="open-aprovador">
+              <span class="value">Ana Carvalho</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Pagar da Conta</label>
+            <div class="input is-select" data-field="conta">
+              <span class="value">Bradesco · CC 64335-3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="entity-card" id="open-bank-modal">
+          <div class="ic">B</div>
+          <div class="info">
+            <div class="top">Dados Bancários do Fornecedor <span class="pill-tag">Verificado</span></div>
+            <div class="bot"><span>077 · Banco Inter S.A. · Ag 0001-9 / CC 6433553-4</span><span class="bank-type">PIX cnpj</span></div>
+            <div class="pay-extras" id="pay-extras">
+              <span class="k">Chave PIX:</span>
+              <span class="v">12.345.678/0001-90</span>
+            </div>
+          </div>
+          <div class="edit-affordance">Editar →</div>
+        </div>
+      </section>
+
+      <!-- ─── Section: Categorização ─── -->
+      <section class="section" data-section="categ">
+        <div class="section-head">
+          <span class="rule"></span>
+          <h3>Categorização</h3>
+          <span class="help">As informações são herdadas do cadastro do fornecedor/colaborador</span>
+        </div>
+
+        <div class="field-row cols-3">
+          <div class="field">
+            <label>Centro de Custo</label>
+            <div class="input is-select" data-field="cc">
+              <span class="value">ADM — Administrativo</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Categoria</label>
+            <div class="input is-select" data-field="cat">
+              <span class="value">Consultoria</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Subcategoria</label>
+            <div class="input is-select" data-field="subcategoria">
+              <span class="value">Selecione</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-row cols-2">
+          <div class="field">
+            <label>Programa</label>
+            <div class="input is-select" data-field="programa">
+              <span class="value">PARC — Apoio Regional</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Plano Orçamentário</label>
+            <div class="input is-select" data-field="plano">
+              <span class="value">2026-OP-003 — Consultorias</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="entity-card" id="open-contract">
+          <div class="ic">C</div>
+          <div class="info">
+            <div class="top">Contrato 0037/2026 <span class="pill-tag">Ativo</span></div>
+            <div class="bot">PARC · Assessoria técnica · vigência 01/01–31/12/2026</div>
+          </div>
+          <div class="edit-affordance">Alterar →</div>
+        </div>
+      </section>
+
+      <!-- Anexos removido -->
+
+    </main>
+
+    <!-- ─────────── Sidebar ─────────── -->
+    <aside class="sidebar" id="sidebar">
+
+      <div class="h4-row">
+        <h4>Resumo Financeiro</h4>
+      </div>
+
+      <div class="composition" id="composition">
+        <div class="row bruto"><span class="k">Valor Bruto</span><span class="v">R$ 10.000,00</span></div>
+        <div class="sep"></div>
+        <div class="row tax divergent" data-anchor="field-iss" title="Clique para revisar"><span class="k">ISS (3,5%)</span><span class="v">- R$ 350,00</span></div>
+        <div class="row tax" data-anchor="input-irrf"><span class="k">IRRF (1,5%)</span><span class="v">- R$ 150,00</span></div>
+        <div class="row tax" data-anchor="input-inss"><span class="k">INSS (11%)</span><span class="v">- R$ 1.100,00</span></div>
+        <div class="row tax" data-anchor="input-pis"><span class="k">PIS (0,65%)</span><span class="v">- R$ 65,00</span></div>
+        <div class="row tax" data-anchor="input-cofins"><span class="k">COFINS (3%)</span><span class="v">- R$ 300,00</span></div>
+        <div class="row tax" data-anchor="input-csll"><span class="k">CSLL (1%)</span><span class="v">- R$ 100,00</span></div>
+        <div class="sep"></div>
+        <div class="row"><span class="k">Descontos</span><span class="v">R$ 0,00</span></div>
+        <div class="row"><span class="k">Juros / Multa</span><span class="v">R$ 0,00</span></div>
+      </div>
+
+      <div class="net-block">
+        <div class="lbl">Líquido a pagar</div>
+        <div class="num" id="sidebar-net">R$ 7.935,00</div>
+        <div class="due">⏱ Vence em 10/06/2026 · em 29 dias</div>
+      </div>
+
+      <div class="titles" id="titles">
+        <div class="h4-row">
+          <h4>Títulos Previstos</h4> 
+        <div class="title-child title-main-payment">
+          <span class="kind">NFS-e</span>
+          <div class="to">Tech Solutions Ltda</div>
+          <div class="meta">
+            <span class="amt">R$ 7.935,00</span>
+          </div>
+        </div>
+
+        <div class="title-children">
+          <div class="title-child divergent">
+            <span class="kind">ISS</span>
+            <span class="to">SEFIN Fortaleza</span>
+            <span class="amt">R$ 350,00</span>
+          </div>
+          <div class="title-child">
+            <span class="kind">IRRF</span>
+            <span class="to">Receita Federal</span>
+            <span class="amt">R$ 150,00</span>
+          </div>
+          <div class="title-child">
+            <span class="kind">INSS</span>
+            <span class="to">Receita Federal</span>
+            <span class="amt">R$ 1.100,00</span>
+          </div>
+          <div class="title-child">
+            <span class="kind">CSRF</span>
+            <span class="to">Receita Federal</span>
+            <span class="amt">R$ 465,00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sb-sep"></div>
+
+      <h4 style="margin-bottom: 8px;">Validação</h4>
+      <div class="validations">
+        <button class="val ok"><span class="dot">✓</span><span class="label-txt">Fornecedor identificado</span></button>
+        <button class="val ok"><span class="dot">✓</span><span class="label-txt">Cálculo bruto → líquido íntegro</span></button>
+        <button class="val ok"><span class="dot">✓</span><span class="label-txt">Dados bancários válidos</span></button>
+        <button class="val warn" id="val-iss" data-anchor="field-iss">
+          <span class="dot">!</span>
+          <span class="label-txt">Alíquota ISS divergente do padrão SEFIN</span>
+          <span class="arrow">→</span>
+        </button>
+        <button class="val pending"><span class="dot">·</span><span class="label-txt">Aguarda aprovação do gestor</span></button>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ─────────── Bottom bar ─────────── -->
+  <footer class="bottombar">
+    <div class="status">
+      <span class="save-dot"></span>
+      <span id="save-status">Auto-salvo · há um instante</span>
+      <span class="stage" id="stage-pill">Rascunho</span>
+    </div>
+    <div class="actions">
+      <button class="btn btn-ghost" id="btn-discard">Descartar</button>
+      <button class="btn btn-secondary">Salvar rascunho</button>
+      <button class="btn btn-primary" id="btn-approve">
+        Salvar Documento
+        <span class="kbd">⌘↵</span>
+      </button>
+    </div>
+  </footer>
+
+</div>
+
+<!-- ─────────── Modals ─────────── -->
+
+<!-- Buscar Fornecedor -->
+<div class="modal-backdrop" id="modal-fornecedor">
+  <div class="modal" style="width: 540px;">
+    <div class="modal-head">
+      <h3>Buscar Fornecedor</h3>
+      <button class="x" data-close>✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="search-input">
+        <span class="ic">🔍</span>
+        <input type="text" placeholder="Digite nome, CNPJ ou apelido…" id="forn-search" autofocus />
+        <span class="kbd-hint">↑↓ ↵</span>
+      </div>
+      <div class="results" id="forn-results">
+        <button class="result focused"><span class="av">TS</span><div class="info"><div class="nm">Tech Solutions Ltda</div><div class="id-row">12.345.678/0001-90 · Fortaleza/CE</div></div><span class="arrow">↵</span></button>
+        <button class="result"><span class="av">TC</span><div class="info"><div class="nm">Tech Consultoria S/S</div><div class="id-row">23.456.789/0001-12 · São Paulo/SP</div></div><span class="arrow">↵</span></button>
+        <button class="result"><span class="av">TI</span><div class="info"><div class="nm">Techin Sistemas Ltda ME</div><div class="id-row">34.567.890/0001-23 · Recife/PE</div></div><span class="arrow">↵</span></button>
+        <button class="result"><span class="av">TF</span><div class="info"><div class="nm">Tech Force Engenharia</div><div class="id-row">45.678.901/0001-34 · Belo Horizonte/MG</div></div><span class="arrow">↵</span></button>
+      </div>
+      <div style="margin-top: 12px; padding-top: 12px; border-top: 0.5px dashed var(--paper-rule); font-size: 11px; color: var(--ink-4); display: flex; justify-content: space-between; align-items: center;">
+        <span>Nenhum resultado é o que procura?</span>
+        <button class="btn btn-secondary" style="padding: 5px 10px; font-size: 10.5px;">+ Cadastrar novo fornecedor</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Alíquota Divergente -->
+<div class="modal-backdrop" id="modal-divergencia">
+  <div class="modal" style="width: 520px;">
+    <div class="modal-head">
+      <h3>Alíquota ISS Divergente</h3>
+      <button class="x" data-close>✕</button>
+    </div>
+    <div class="modal-body">
+      <p style="font-size: 12px; color: var(--ink-3); line-height: 1.55; margin: 0 0 14px;">
+        O documento traz ISS de <strong style="color: rgb(236, 134, 39);">3,5%</strong>, mas a alíquota padrão da SEFIN Fortaleza para o código de serviço <code style="font-family: 'JetBrains Mono', monospace; background: var(--paper-beige); padding: 1px 4px; border-radius: 3px;">01.05</code> é <strong>5,0%</strong>. O sistema respeita o documento (Princípio de Soberania), mas exige sua escolha consciente.
+      </p>
+
+      <div class="diverge-card">
+        <div class="diverge-row">
+          <div class="diverge-cell expected">
+            <div class="lbl">Padrão SEFIN</div>
+            <div class="v">R$ 500,00</div>
+            <div style="font-size: 10px; color: var(--ink-5); margin-top: 2px;">5,0% sobre R$ 10.000</div>
+          </div>
+          <div class="arr">→</div>
+          <div class="diverge-cell actual">
+            <div class="lbl">No documento</div>
+            <div class="v">R$ 350,00</div>
+            <div style="font-size: 10px; color: rgb(236, 134, 39); margin-top: 2px;">3,5% sobre R$ 10.000</div>
+          </div>
+        </div>
+        <div class="diverge-meta">
+          Diferença de <strong>R$ 150,00</strong>. Possíveis causas: regime especial, código de serviço específico, ou erro de emissão.
+        </div>
+      </div>
+
+      <div class="choice-list">
+        <div class="choice selected" data-choice="aceitar">
+          <div class="radio"></div>
+          <div class="body">
+            <div class="ttl">Aceitar o documento (R$ 350,00)</div>
+            <div class="desc">Respeitar o que está escrito na nota. A divergência fica registrada na trilha de auditoria com sua assinatura.</div>
+          </div>
+        </div>
+        <div class="choice" data-choice="corrigir">
+          <div class="radio"></div>
+          <div class="body">
+            <div class="ttl">Corrigir para o padrão SEFIN (R$ 500,00)</div>
+            <div class="desc">Sobrescrever o valor lido pelo OCR. Use quando tem certeza de que a nota está com erro de emissão.</div>
+          </div>
+        </div>
+        <div class="choice" data-choice="contatar">
+          <div class="radio"></div>
+          <div class="body">
+            <div class="ttl">Solicitar nota corrigida ao fornecedor</div>
+            <div class="desc">Coloca o documento em "Aguarda Correção" e bloqueia o lançamento. Envia notificação ao contato do fornecedor.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-ghost" data-close>Cancelar</button>
+      <button class="btn btn-primary" id="confirm-divergence">Confirmar escolha</button>
+    </div>
+  </div>
+</div>
+
+<!-- Dados Bancários -->
+<div class="modal-backdrop" id="modal-bank">
+  <div class="modal" style="width: 460px;">
+    <div class="modal-head">
+      <h3>Editar Dados Bancários</h3>
+      <button class="x" data-close>✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="field-row cols-2" style="margin-bottom: 12px;">
+        <div class="field">
+          <label>Banco</label>
+          <div class="input is-select"><span class="value">077 — Banco Inter S.A.</span></div>
+        </div>
+        <div class="field">
+          <label>Tipo</label>
+          <div class="input is-select"><span class="value">Conta Corrente</span></div>
+        </div>
+      </div>
+      <div class="field-row cols-2" style="margin-bottom: 12px;">
+        <div class="field">
+          <label>Agência</label>
+          <div class="input"><input type="text" value="0001-9" /></div>
+        </div>
+        <div class="field">
+          <label>Conta</label>
+          <div class="input"><input type="text" value="6433553-4" /></div>
+        </div>
+      </div>
+      <div class="field-row wide" style="margin-bottom: 0;">
+        <div class="field">
+          <label>Chave PIX (opcional)</label>
+          <div class="input"><input type="text" value="12.345.678/0001-90" /></div>
+        </div>
+      </div>
+      <div style="margin-top: 14px; padding: 10px 12px; background: var(--green-bg); border-radius: 6px; font-size: 11px; color: rgb(28, 121, 67); display: flex; align-items: center; gap: 6px;">
+        <span>✓</span><span>Última verificação do CNPJ ↔ titularidade: <strong>02/05/2026</strong></span>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-ghost" data-close>Cancelar</button>
+      <button class="btn btn-primary" data-close>Salvar alterações</button>
+    </div>
+  </div>
+</div>
+
+<!-- Tipo de Documento -->
+<div class="modal-backdrop" id="modal-tipo">
+  <div class="modal" style="width: 620px;">
+    <div class="modal-head">
+      <h3>Tipo de Documento</h3>
+      <button class="x" data-close>✕</button>
+    </div>
+    <div class="modal-body">
+      <p style="font-size: 11.5px; color: var(--ink-4); line-height: 1.55; margin: 0 0 14px;">
+        Tipos fiscais (NFS-e, DANFE, RPA) habilitam a seção de retenções e o motor de regras tributárias.
+        Demais tipos são tratados como lançamentos manuais (RN-05).
+      </p>
+      <div class="tipo-grid" id="tipo-grid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Forma de Pagamento -->
+<div class="modal-backdrop" id="modal-forma">
+  <div class="modal" style="width: 480px;">
+    <div class="modal-head">
+      <h3>Forma de Pagamento</h3>
+      <button class="x" data-close>✕</button>
+    </div>
+    <div class="modal-body">
+      <p style="font-size: 11.5px; color: var(--ink-4); line-height: 1.55; margin: 0 0 14px;">
+        A forma escolhida controla os campos complementares (chave PIX, código de barras, dados bancários).
+      </p>
+      <div class="forma-grid" id="forma-grid">
+        <button class="forma-card" data-forma="PIX" data-needs="pix">
+          <div class="f-ic">⚡</div>
+          <div class="f-info">
+            <div class="f-nm">PIX</div>
+            <div class="f-desc">Transferência instantânea · chave do fornecedor</div>
+          </div>
+        </button>
+        <button class="forma-card" data-forma="Boleto" data-needs="barras">
+          <div class="f-ic">⠇</div>
+          <div class="f-info">
+            <div class="f-nm">Boleto</div>
+            <div class="f-desc">Código de barras / linha digitável</div>
+          </div>
+        </button>
+        <button class="forma-card" data-forma="TED" data-needs="conta">
+          <div class="f-ic">→</div>
+          <div class="f-info">
+            <div class="f-nm">TED</div>
+            <div class="f-desc">Transferência eletrônica entre bancos</div>
+          </div>
+        </button>
+        <button class="forma-card" data-forma="Transferência" data-needs="conta">
+          <div class="f-ic">⇄</div>
+          <div class="f-info">
+            <div class="f-nm">Transferência bancária</div>
+            <div class="f-desc">DOC / TEF · mesma instituição ou interbancária</div>
+          </div>
+        </button>
+        <button class="forma-card" data-forma="Cartão" data-needs="cartao">
+          <div class="f-ic">▢</div>
+          <div class="f-info">
+            <div class="f-nm">Cartão corporativo</div>
+            <div class="f-desc">Débito ou crédito na fatura da empresa</div>
+          </div>
+        </button>
+        <button class="forma-card" data-forma="Outro" data-needs="livre">
+          <div class="f-ic">·</div>
+          <div class="f-info">
+            <div class="f-nm">Outro</div>
+            <div class="f-desc">Cheque, dinheiro, compensação · preenchimento livre</div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Aprovador -->
+<div class="modal-backdrop" id="modal-aprovador">
+  <div class="modal" style="width: 520px;">
+    <div class="modal-head">
+      <h3>Escolher Aprovador</h3>
+      <button class="x" data-close>✕</button>
+    </div>
+    <div class="modal-body">
+      <p style="font-size: 11.5px; color: var(--ink-4); line-height: 1.55; margin: 0 0 14px;">
+        Selecione um aprovador entre os colaboradores cadastrados com perfil de aprovação.
+      </p>
+      <div class="choice-list">
+        <button class="choice selected approver-card" data-name="Ana Carvalho">
+          <div class="radio"></div>
+          <div class="body">
+            <div class="ttl">Ana Carvalho</div>
+            <div class="desc">Gestor Financeiro · Fortaleza/CE</div>
+          </div>
+        </button>
+        <button class="choice approver-card" data-name="Mariana Oliveira">
+          <div class="radio"></div>
+          <div class="body">
+            <div class="ttl">Mariana Oliveira</div>
+            <div class="desc">Coordenadora de Projetos · Recife/PE</div>
+          </div>
+        </button>
+        <button class="choice approver-card" data-name="Bruno Tavares">
+          <div class="radio"></div>
+          <div class="body">
+            <div class="ttl">Bruno Tavares</div>
+            <div class="desc">Analista Sênior · São Paulo/SP</div>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-ghost" data-close>Cancelar</button>
+      <button class="btn btn-primary" id="confirm-aprovador">Selecionar aprovador</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <span class="ic-ok">✓</span>
+  <span id="toast-msg">Auto-salvo</span>
+</div>
+
+<!-- Tooltip -->
+<div class="tip" id="tip">Origem: nota fiscal</div>
+
+<!-- Tweaks FAB & panel -->
+<button class="tweaks-fab" id="tweaks-fab" title="Demos">✦</button>
+<div class="tweaks" id="tweaks-panel">
+  <h5>Demos para o cliente <button id="tweaks-close">✕</button></h5>
+  <div class="scene-list">
+    <button class="scene active" data-scene="ocr-cascade"><span class="n">1</span>Simular leitura OCR</button>
+    <button class="scene" data-scene="cross-highlight"><span class="n">2</span>Cross-highlight PDF</button>
+    <button class="scene" data-scene="live-calc"><span class="n">3</span>Cálculo ao vivo</button>
+    <button class="scene" data-scene="divergence"><span class="n">4</span>Abrir divergência ISS</button>
+    <button class="scene" data-scene="approve"><span class="n">5</span>Enviar p/ aprovação</button>
+    <button class="scene" data-scene="sealed"><span class="n">6</span>Estado Selado (R2)</button>
+    <button class="scene" data-scene="tipo-cycle"><span class="n">7</span>Trocar tipo de doc</button>
+    <button class="scene" data-scene="reset"><span class="n">↻</span>Resetar</button>
+  </div>
+</div>
+
+<script src="doc-types.js"></script>
+<script src="app.js"></script>
+<script src="transform.js"></script>
+
+<!-- ─────────── Design Tweaks panel (system) ─────────── -->
+<style>
+  .dt-panel {
+    position: fixed; left: 24px; bottom: 80px; z-index: 9000;
+    width: 280px; background: var(--paper); color: var(--ink-1);
+    border: 0.5px solid var(--paper-rule); border-radius: 12px;
+    box-shadow: 0 18px 48px -12px rgba(30, 26, 18, 0.22), 0 2px 8px rgba(30,26,18,0.06);
+    font-family: 'Inter', sans-serif; padding: 14px 14px 12px;
+    transform: translateY(8px); opacity: 0; pointer-events: none;
+    transition: transform 200ms var(--ease), opacity 200ms var(--ease);
+  }
+  .dt-panel.open { transform: none; opacity: 1; pointer-events: auto; }
+  .dt-panel h6 {
+    margin: 0 0 10px; font-family: 'Fraunces', serif; font-weight: 600;
+    font-size: 14px; color: var(--ink-1); display: flex; align-items: center;
+    justify-content: space-between;
+  }
+  .dt-panel h6 small {
+    font-family: 'Inter', sans-serif; font-weight: 500; font-size: 10px;
+    color: var(--ink-5); letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .dt-panel h6 .x {
+    background: none; border: none; color: var(--ink-5); cursor: pointer;
+    font-size: 14px; padding: 2px 4px; border-radius: 4px;
+  }
+  .dt-panel h6 .x:hover { background: var(--paper-beige); color: var(--ink-2); }
+  .dt-section {
+    margin-top: 10px; padding-top: 10px; border-top: 0.5px dashed var(--paper-rule);
+  }
+  .dt-section:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+  .dt-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.05em;
+    text-transform: uppercase; color: var(--ink-5); margin-bottom: 6px;
+  }
+  .dt-seg {
+    display: flex; gap: 2px; padding: 2px;
+    background: var(--paper-beige); border-radius: 7px;
+  }
+  .dt-seg button {
+    flex: 1; min-width: 0; padding: 6px 8px; border: none; background: transparent;
+    font-family: inherit; font-size: 11px; font-weight: 500; color: var(--ink-3);
+    border-radius: 5px; cursor: pointer; transition: all 160ms var(--ease);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .dt-seg button:hover { color: var(--ink-1); }
+  .dt-seg button.on {
+    background: var(--paper); color: var(--ink-1);
+    box-shadow: 0 1px 2px rgba(30,26,18,0.06), 0 0 0 0.5px var(--paper-rule);
+  }
+  .dt-toggle {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 0; font-size: 12px; color: var(--ink-2);
+  }
+  .dt-toggle + .dt-toggle { border-top: 0.5px dashed var(--paper-rule); }
+  .dt-switch {
+    position: relative; width: 30px; height: 18px; border-radius: 9px;
+    background: var(--paper-rule); border: none; cursor: pointer; padding: 0;
+    transition: background 180ms var(--ease);
+  }
+  .dt-switch::after {
+    content: ''; position: absolute; left: 2px; top: 2px;
+    width: 14px; height: 14px; border-radius: 50%; background: white;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    transition: transform 180ms var(--ease);
+  }
+  .dt-switch.on { background: var(--teal); }
+  .dt-switch.on::after { transform: translateX(12px); }
+  .dt-slider {
+    width: 100%; -webkit-appearance: none; appearance: none;
+    height: 4px; border-radius: 2px; background: var(--paper-rule); outline: none;
+  }
+  .dt-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none; width: 14px; height: 14px;
+    border-radius: 50%; background: var(--teal); cursor: pointer;
+    border: 2px solid var(--paper); box-shadow: 0 1px 3px rgba(0,0,0,0.18);
+  }
+  .dt-slider-row {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .dt-slider-val {
+    font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
+    color: var(--ink-3); min-width: 32px; text-align: right;
+  }
+</style>
+
+<div class="dt-panel" id="dt-panel" role="dialog" aria-label="Tweaks de design">
+  <h6>Tweaks <small>Pagamento</small><button class="x" id="dt-close" title="Fechar">✕</button></h6>
+
+  <div class="dt-section">
+    <div class="dt-label">Layout dos campos</div>
+    <div class="dt-seg" data-key="payLayout">
+      <button data-val="two">2 colunas</button>
+      <button data-val="stack">Empilhado</button>
+    </div>
+  </div>
+
+  <div class="dt-section">
+    <div class="dt-label">Forma de pagamento</div>
+    <div class="dt-seg" data-key="forma">
+      <button data-val="PIX">PIX</button>
+      <button data-val="Boleto">Boleto</button>
+      <button data-val="TED">TED</button>
+    </div>
+  </div>
+
+  <div class="dt-section">
+    <div class="dt-label">Densidade do card</div>
+    <div class="dt-slider-row">
+      <input type="range" class="dt-slider" id="dt-density" min="12" max="28" step="2" />
+      <span class="dt-slider-val" id="dt-density-val">20</span>
+    </div>
+  </div>
+
+  <div class="dt-section">
+    <div class="dt-label">Raio das bordas</div>
+    <div class="dt-slider-row">
+      <input type="range" class="dt-slider" id="dt-radius" min="4" max="16" step="1" />
+      <span class="dt-slider-val" id="dt-radius-val">10</span>
+    </div>
+  </div>
+
+  <div class="dt-section">
+    <div class="dt-toggle">
+      <span>Dados bancários do fornecedor</span>
+      <button class="dt-switch" data-toggle="showBank" aria-label="Mostrar dados bancários"></button>
+    </div>
+    <div class="dt-toggle">
+      <span>Strip de chave PIX</span>
+      <button class="dt-switch" data-toggle="showExtras" aria-label="Mostrar strip"></button>
+    </div>
+    <div class="dt-toggle">
+      <span>Affordance "Editar →"</span>
+      <button class="dt-switch" data-toggle="showEdit" aria-label="Mostrar affordance"></button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "payLayout": "two",
+    "forma": "TED",
+    "density": 20,
+    "radius": 10,
+    "showBank": true,
+    "showExtras": true,
+    "showEdit": true
+  }/*EDITMODE-END*/;
+
+  let state = { ...TWEAK_DEFAULTS };
+  const panel = document.getElementById('dt-panel');
+  const section = document.querySelector('[data-section="pagamento"]');
+  const styleTag = document.createElement('style');
+  styleTag.id = 'dt-runtime';
+  document.head.appendChild(styleTag);
+
+  function apply() {
+    // Layout
+    const row = section.querySelector('.field-row.cols-2');
+    if (row) {
+      row.style.gridTemplateColumns = state.payLayout === 'stack' ? '1fr' : '';
+    }
+    // Forma — sync via app.js handler if present
+    if (window.applyForma) {
+      try { window.applyForma(state.forma); } catch(e){}
+    } else {
+      const formaVal = section.querySelector('[data-field="forma"] .value');
+      if (formaVal) formaVal.textContent = state.forma;
+    }
+    // Density + radius via runtime stylesheet (scoped to section)
+    styleTag.textContent = `
+      [data-section="pagamento"] { padding: ${state.density}px !important; border-radius: ${state.radius + 2}px !important; }
+      [data-section="pagamento"] .entity-card,
+      [data-section="pagamento"] .pay-barras-input,
+      [data-section="pagamento"] .pay-extras,
+      [data-section="pagamento"] .input { border-radius: ${state.radius}px !important; }
+      ${state.showBank ? '' : '[data-section="pagamento"] .entity-card { display: none !important; }'}
+      ${state.showExtras ? '' : '[data-section="pagamento"] #pay-extras { display: none !important; }'}
+      ${state.showEdit ? '' : '[data-section="pagamento"] .entity-card .edit-affordance { display: none !important; }'}
+    `;
+    // Reflect state in controls
+    panel.querySelectorAll('.dt-seg').forEach(seg => {
+      const key = seg.dataset.key;
+      seg.querySelectorAll('button').forEach(b => {
+        b.classList.toggle('on', String(state[key]) === b.dataset.val);
+      });
+    });
+    panel.querySelectorAll('[data-toggle]').forEach(sw => {
+      sw.classList.toggle('on', !!state[sw.dataset.toggle]);
+    });
+    const d = panel.querySelector('#dt-density'); if (d) d.value = state.density;
+    const dv = panel.querySelector('#dt-density-val'); if (dv) dv.textContent = state.density;
+    const r = panel.querySelector('#dt-radius'); if (r) r.value = state.radius;
+    const rv = panel.querySelector('#dt-radius-val'); if (rv) rv.textContent = state.radius;
+  }
+
+  function persist(patch) {
+    try {
+      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: patch }, '*');
+    } catch(e){}
+  }
+
+  function set(patch) {
+    Object.assign(state, patch);
+    apply();
+    persist(patch);
+  }
+
+  // Wire controls
+  panel.querySelectorAll('.dt-seg').forEach(seg => {
+    seg.addEventListener('click', e => {
+      const btn = e.target.closest('button[data-val]');
+      if (!btn) return;
+      const key = seg.dataset.key;
+      let val = btn.dataset.val;
+      if (key === 'density' || key === 'radius') val = +val;
+      set({ [key]: val });
+    });
+  });
+  panel.querySelectorAll('[data-toggle]').forEach(sw => {
+    sw.addEventListener('click', () => {
+      const k = sw.dataset.toggle;
+      set({ [k]: !state[k] });
+    });
+  });
+  panel.querySelector('#dt-density').addEventListener('input', e => {
+    set({ density: +e.target.value });
+  });
+  panel.querySelector('#dt-radius').addEventListener('input', e => {
+    set({ radius: +e.target.value });
+  });
+  panel.querySelector('#dt-close').addEventListener('click', () => {
+    panel.classList.remove('open');
+    try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch(e){}
+  });
+
+  // Edit-mode protocol (register listener BEFORE announcing)
+  window.addEventListener('message', e => {
+    const d = e.data || {};
+    if (d.type === '__activate_edit_mode') panel.classList.add('open');
+    if (d.type === '__deactivate_edit_mode') panel.classList.remove('open');
+  });
+  try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch(e){}
+
+  apply();
+})();
+</script>
+
+</body>
+</html>
+
+<style id="__om-edit-overrides">
+</style>
